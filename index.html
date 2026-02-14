@@ -5,21 +5,31 @@
 <title>Mario Kart 64 Emulator</title>
 <style>
 html, body { margin:0; height:100%; background:black; }
-#game { width:100%; height:100vh; }
+#game { width:100%; height:100%; }
 </style>
 </head>
 <body>
 
-<div id="game"></div>
+<!-- Responsive container for emulator -->
+<div style="width:640px;height:480px;max-width:100%;">
+    <div id="game"></div>
+</div>
 
-<script>
-EJS_player = "#game";
-EJS_core = "n64";
-EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-EJS_gameUrl = "https://30akhanal-ship-it.github.io/Schoolwork/Mario%20Kart%2064%20(USA).z64";
+<script type="text/javascript">
+    // EmulatorJS settings
+    EJS_player = '#game';
+    
+    // N64 core (or mupen64plus_next / parallel-n64)
+    EJS_core = 'n64';
+    
+    // Path to ROM (can be GitHub Pages URL or local)
+    EJS_gameUrl = 'https://30akhanal-ship-it.github.io/Schoolwork/Mario%20Kart%2064%20(USA).z64';
+    
+    // Path to EmulatorJS data directory (loader)
+    EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
 </script>
 
-
+<!-- EmulatorJS loader -->
 <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 
 </body>
